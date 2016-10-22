@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href='public/styles/bootstrap.css' rel="stylesheet">
+</head>
+<body>
+{if $add}
+<!-- 加载编辑器的容器 -->
+    
+<table class='table table-bordered table-striped table-hover'>
+   <tr>
+		<td class="text-right">广告类型</td>
+		<td>
+			<input type='radio' value="1">banner
+			<input type='radio' value="2">fullColumn
+			<input type='radio' value="3">sideBar
+			<input type='radio' value="4">slider
+		</td>
+	</tr>
+	<tr>
+		<td class="text-right">广告title</td><td><input type='text' class="form-control"></td>
+	</tr>
+	<tr>
+		<td class="text-right">广告link</td><td><input type='text' class="form-control"></td>
+	</tr>
+	<tr>
+		<td class="text-right">广告thumbnail</td>
+		<td><input type='file' class="form-control"></td>
+	</tr>
+	<tr>
+		<td class="text-right">广告描述</td>
+		<td width=80%>
+	<script id="container" name="content" type="text/plain">
+        
+    </script>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="public/ueditor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="public/ueditor/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+    </script>
+		</td>
+	</tr>
+</table>
+{/if}
+</body>
+</html>
